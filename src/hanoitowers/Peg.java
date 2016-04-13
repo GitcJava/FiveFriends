@@ -20,6 +20,6 @@ public class Peg extends Figure {
 
     @Override
     public void draw(Graphics graphics) {
-
+        System.out.println("kuku");
     }
 }
