@@ -1,6 +1,9 @@
 package hanoitowers;
 
 
+import figures.Figure;
+import figures.FigureCanvas;
+
 import java.awt.*;
 
 
