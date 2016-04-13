@@ -18,6 +18,7 @@ public class Peg extends Figure {
         return false;
     }
 
+
     @Override
     public void draw(Graphics graphics) {
 
