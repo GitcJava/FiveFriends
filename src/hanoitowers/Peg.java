@@ -10,12 +10,7 @@ import java.awt.*;
 
 public class Peg extends Figure {
 
-    private int xBottom;
-    private int yBottom;
-    private int widthBottom;
-    private int heigthBottom;
-    private TowerCanvas towerCanvas;
-    private Figure runFigure;
+
 
     protected Peg(int x, int y, int width, int height, FigureCanvas figureCanvas, Color color) {
         super(x, y, width, height, figureCanvas, color);
