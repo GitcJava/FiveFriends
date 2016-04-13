@@ -8,7 +8,6 @@ import java.awt.*;
 
 public class Peg extends Figure {
 
-
     protected Peg(int x, int y, int width, int height, FigureCanvas figureCanvas, Color color) {
         super(x, y, width, height, figureCanvas, color);
     }
