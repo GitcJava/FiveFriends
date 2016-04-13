@@ -1,14 +1,11 @@
 package hanoitowers;
 
-import java.awt.*;
-
-
 public class TowerCanvas {
 
 
 
     public TowerCanvas(){
-        //TODO
+        System.out.println("Barev Tatev jan");;
     }
 
     public void addDisc(int c) {
