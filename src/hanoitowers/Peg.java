@@ -1,16 +1,10 @@
 package hanoitowers;
 
 
-
-import figures.Figure;
-import figures.FigureCanvas;
-
 import java.awt.*;
 
 
 public class Peg extends Figure {
-
-
 
     protected Peg(int x, int y, int width, int height, FigureCanvas figureCanvas, Color color) {
         super(x, y, width, height, figureCanvas, color);
@@ -24,6 +18,6 @@ public class Peg extends Figure {
 
     @Override
     public void draw(Graphics graphics) {
-        System.out.println("kuku");
+        System.out.println();
     }
 }
