@@ -1,6 +1,4 @@
 import figures.Figure;
-import figures.FigureCanvas;
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -23,51 +21,6 @@ public class Peg extends Figure {
         this.widthBottom = widthBottom;
         this.heightBottom = heightBottom;
         this.towerCanvas = towerCanvas;
-    }
-    public void moveo(Peg to){
-        moveUp(to);
-
-        moveDown(to);
-    }
-
-    private void moveDown(Peg to){
-        while (isDoneDown(to)){
-            to.getLast().move(0, 4);
-            try {
-                Thread.sleep(30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            towerCanvas.repaint();
-        }
-    }
-    public boolean isDoneDown(Peg to){
-        if (to.discs.size() < 2){
-            return to.getLast().getY() < to.getyBottom() - to.getLast().getHeight();
-        }else {
-            return to.getLast().getY() < to.discs.get(to.discs.size() - 2).getY() - to.getLast().getHeight();
-        }
-    }
-
-    private void moveLeftOrRight(Peg to){
-
-    }
-    private Figure getLast() {
-        return discs.get(discs.size() - 1);
-    }
-
-
-    private void moveUp(Peg to) {
-        while (getLast().getY() > getY() - 50) {
-            getLast().move(0, -5);
-            try {
-                Thread.sleep(30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            towerCanvas.repaint();
-        }
-        to.discs.add(discs.remove(discs.size() - 1));
     }
 
 
@@ -103,9 +56,8 @@ public class Peg extends Figure {
         this.heightBottom = heightBottom;
     }
 
-
     @Override
-    public boolean isBelong(int i, int i1) {
+    public boolean isBelong(int x, int y) {
         return false;
     }
 

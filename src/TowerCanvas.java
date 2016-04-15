@@ -20,33 +20,14 @@ public class TowerCanvas extends JPanel{
     private int x = FIRST_PEG.getX();
 
 
-    @Override
-    public void update(Graphics g) {
-        paint(g);
-    }
-
-    @Override
-    public void paint(Graphics g) {
-        g.clearRect(0,0,1000,1000);
-        FIRST_PEG.draw(g);
-        SECOND_PEG.draw(g);
-        THIRD_PEG.draw(g);
-    }
-
     public void addDisc(int c) {
 
     }
     public void reset(){
-        minWidth = 30;
-        discHeigth = 20;
-        y = FIRST_PEG.getyBottom() - discHeigth;
-        x = FIRST_PEG.getX();
 
     }
 
     public void play(){
-        if (!FIRST_PEG.discs.isEmpty()){
 
-        }
     }
 }
