@@ -1,0 +1,469 @@
+Index: .idea/libraries/BraceChecker.xml
+===================================================================
+--- .idea/libraries/BraceChecker.xml	(date 1461101974000)
++++ .idea/libraries/BraceChecker.xml	(date 1461101974000)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="BraceChecker">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/Common/braceChecker.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: FiveFriends.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- FiveFriends.iml	(date 1461101974000)
++++ FiveFriends.iml	(revision )
+@@ -7,5 +7,8 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="figureFrame" level="project" />
++    <orderEntry type="library" name="braceChecker" level="project" />
++    <orderEntry type="library" name="searchFrame" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/libraries/SearchFrame.xml
+===================================================================
+--- .idea/libraries/SearchFrame.xml	(date 1461101974000)
++++ .idea/libraries/SearchFrame.xml	(date 1461101974000)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="SearchFrame">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/Common/searchFrame.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/figureFrame.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/figureFrame.xml	(date 1461101974000)
++++ .idea/libraries/figureFrame.xml	(revision )
+@@ -1,7 +1,7 @@
+ <component name="libraryTable">
+   <library name="figureFrame">
+     <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/lib/figureFrame.jar!/" />
++      <root url="jar://$PROJECT_DIR$/Common/figureFrame.jar!/" />
+     </CLASSES>
+     <JAVADOC />
+     <SOURCES />
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(date 1461101974000)
++++ .idea/workspace.xml	(revision )
+@@ -2,12 +2,20 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="de5816a9-65c1-4f1d-b638-eb847ef062c8" name="Default" comment="">
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/BraceChecker.xml" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SearchFrame.xml" />
++      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\.idea\libraries\BraceChecker.xml" afterPath="" />
++      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\.idea\libraries\SearchFrame.xml" afterPath="" />
++      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\BraceChecker.jar" afterPath="$PROJECT_DIR$/Common/braceChecker.jar" />
++      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\SearchFrame.jar" afterPath="$PROJECT_DIR$/Common/searchFrame.jar" />
++      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\lib\figureFrame.jar" afterPath="$PROJECT_DIR$/Common/figureFrame.jar" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FiveFriends.iml" afterPath="$PROJECT_DIR$/FiveFriends.iml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/notepad/Notepad.java" afterPath="$PROJECT_DIR$/src/notepad/Notepad.java" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hanoitowers/Peg.java" afterPath="$PROJECT_DIR$/src/hanoitowers/Peg.java" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/figureFrame.xml" afterPath="$PROJECT_DIR$/.idea/libraries/figureFrame.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+     </list>
+     <ignored path="$PROJECT_DIR$/out/" />
++    <ignored path=".idea/dataSources.local.xml" />
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="TRACKING_ENABLED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -23,6 +31,57 @@
+   <component name="FavoritesManager">
+     <favorites_list name="FiveFriends" />
+   </component>
++  <component name="FileEditorManager">
++    <leaf>
++      <file leaf-file-name="Peg.java" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/src/hanoitowers/Peg.java">
++          <provider selected="true" editor-type-id="text-editor">
++            <state vertical-scroll-proportion="0.0">
++              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
++              <folding>
++                <element signature="imports" expanded="true" />
++                <element signature="e#174#182#0" expanded="true" />
++                <element signature="e#753#754#0" expanded="true" />
++                <element signature="e#783#784#0" expanded="true" />
++                <element signature="e#826#827#0" expanded="true" />
++                <element signature="e#864#865#0" expanded="true" />
++                <element signature="e#895#896#0" expanded="true" />
++                <element signature="e#925#926#0" expanded="true" />
++                <element signature="e#968#969#0" expanded="true" />
++                <element signature="e#1006#1007#0" expanded="true" />
++                <element signature="e#1041#1042#0" expanded="true" />
++                <element signature="e#1075#1076#0" expanded="true" />
++                <element signature="e#1126#1127#0" expanded="true" />
++                <element signature="e#1172#1173#0" expanded="true" />
++                <element signature="e#1208#1209#0" expanded="true" />
++                <element signature="e#1243#1244#0" expanded="true" />
++                <element signature="e#1296#1297#0" expanded="true" />
++                <element signature="e#1344#1345#0" expanded="true" />
++                <element signature="e#1405#1406#0" expanded="true" />
++                <element signature="e#1433#1434#0" expanded="true" />
++                <element signature="e#1491#1492#0" expanded="true" />
++                <element signature="e#1527#1528#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="Notepad.java" pinned="false" current-in-tab="true">
++        <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
++          <provider selected="true" editor-type-id="text-editor">
++            <state vertical-scroll-proportion="0.875969">
++              <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
++              <folding>
++                <element signature="imports" expanded="true" />
++                <element signature="e#4804#4805#0" expanded="true" />
++                <element signature="e#4863#4864#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++    </leaf>
++  </component>
+   <component name="Git.Settings">
+     <option name="ROOT_SYNC" value="DONT_SYNC" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -37,6 +96,14 @@
+       <projects_view />
+     </option>
+   </component>
++  <component name="IdeDocumentHistory">
++    <option name="CHANGED_PATHS">
++      <list>
++        <option value="$PROJECT_DIR$/src/hanoitowers/Peg.java" />
++        <option value="$PROJECT_DIR$/src/notepad/Notepad.java" />
++      </list>
++    </option>
++  </component>
+   <component name="JsBuildToolGruntFileManager" detection-done="true" />
+   <component name="JsBuildToolPackageJson" detection-done="true" />
+   <component name="JsGulpfileManager">
+@@ -111,7 +178,43 @@
+               <option name="myItemId" value="src" />
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+             </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="notepad" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
+           </PATH>
++          <PATH>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="src" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="hanoitowers" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++          </PATH>
++          <PATH>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="Common" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++          </PATH>
+         </subPane>
+       </pane>
+     </panes>
+@@ -119,15 +222,38 @@
+   <component name="PropertiesComponent">
+     <property name="aspect.path.notification.shown" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="project.structure.last.edited" value="Project" />
+-    <property name="project.structure.proportion" value="0.0" />
+-    <property name="project.structure.side.proportion" value="0.0" />
++    <property name="project.structure.last.edited" value="Libraries" />
++    <property name="project.structure.proportion" value="0.15" />
++    <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+     <property name="settings.editor.splitter.proportion" value="0.2" />
+-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/Common/searchFrame.jar!/" />
++    <property name="recentsLimit" value="5" />
++    <property name="dynamic.classpath" value="false" />
+   </component>
+-  <component name="RunManager">
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Gor\IdeaProjects\FiveFriends\Common" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\Gor\IdeaProjects\FiveFriends\Common" />
++      <recent name="C:\Users\Gor\IdeaProjects\FiveFriends\lib" />
++    </key>
++  </component>
++  <component name="RunManager" selected="JAR Application.searchFrame.jar">
++    <configuration default="false" name="BraceChecker.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
++      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
++      <option name="JAR_PATH" value="$PROJECT_DIR$/Common/BraceChecker.jar" />
++      <envs />
++      <method />
++    </configuration>
++    <configuration default="false" name="searchFrame.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
++      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
++      <option name="JAR_PATH" value="$PROJECT_DIR$/Common/searchFrame.jar" />
++      <envs />
++      <method />
++    </configuration>
+     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+       <module name="" />
+       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+@@ -378,6 +504,16 @@
+     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+       <method />
+     </configuration>
++    <list size="2">
++      <item index="0" class="java.lang.String" itemvalue="JAR Application.BraceChecker.jar" />
++      <item index="1" class="java.lang.String" itemvalue="JAR Application.searchFrame.jar" />
++    </list>
++    <recent_temporary>
++      <list size="2">
++        <item index="0" class="java.lang.String" itemvalue="JAR Application.searchFrame.jar" />
++        <item index="1" class="java.lang.String" itemvalue="JAR Application.BraceChecker.jar" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="ShelveChangesManager" show_recycled="false">
+     <changelist date="1461101590965">
+@@ -421,7 +557,7 @@
+       <updated>1460801038461</updated>
+       <workItem from="1460801043651" duration="253000" />
+       <workItem from="1461101282804" duration="312000" />
+-      <workItem from="1461101596303" duration="370000" />
++      <workItem from="1461101596303" duration="896000" />
+     </task>
+     <task id="LOCAL-00001" summary="Import the class notepad and bracechecker ,searchframe .jar files.">
+       <created>1461101591471</created>
+@@ -435,11 +571,17 @@
+       <option name="project" value="LOCAL" />
+       <updated>1461101816495</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Import the class notepad and bracechecker ,searchframe .jar files.">
++      <created>1461101974957</created>
++      <option name="number" value="00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1461101974957</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="935000" />
++    <option name="totallyTimeSpent" value="1461000" />
+   </component>
+   <component name="ToolWindowManager">
+     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+@@ -449,14 +591,14 @@
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
++      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
+       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32520324" sideWeight="0.4969605" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32520324" sideWeight="0.4969605" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.4969605" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+@@ -481,13 +623,60 @@
+     <option name="LAST_COMMIT_MESSAGE" value="Import the class notepad and bracechecker ,searchframe .jar files." />
+   </component>
+   <component name="XDebuggerManager">
+-    <breakpoint-manager />
++    <breakpoint-manager>
++      <option name="time" value="1" />
++    </breakpoint-manager>
+     <watches-manager />
+   </component>
+   <component name="antWorkspaceConfiguration">
+     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+     <option name="FILTER_TARGETS" value="false" />
+   </component>
++  <component name="editorHistoryManager">
++    <entry file="file://$PROJECT_DIR$/src/hanoitowers/Peg.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#174#182#0" expanded="true" />
++            <element signature="e#753#754#0" expanded="true" />
++            <element signature="e#783#784#0" expanded="true" />
++            <element signature="e#826#827#0" expanded="true" />
++            <element signature="e#864#865#0" expanded="true" />
++            <element signature="e#895#896#0" expanded="true" />
++            <element signature="e#925#926#0" expanded="true" />
++            <element signature="e#968#969#0" expanded="true" />
++            <element signature="e#1006#1007#0" expanded="true" />
++            <element signature="e#1041#1042#0" expanded="true" />
++            <element signature="e#1075#1076#0" expanded="true" />
++            <element signature="e#1126#1127#0" expanded="true" />
++            <element signature="e#1172#1173#0" expanded="true" />
++            <element signature="e#1208#1209#0" expanded="true" />
++            <element signature="e#1243#1244#0" expanded="true" />
++            <element signature="e#1296#1297#0" expanded="true" />
++            <element signature="e#1344#1345#0" expanded="true" />
++            <element signature="e#1405#1406#0" expanded="true" />
++            <element signature="e#1433#1434#0" expanded="true" />
++            <element signature="e#1491#1492#0" expanded="true" />
++            <element signature="e#1527#1528#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.875969">
++          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#4804#4805#0" expanded="true" />
++            <element signature="e#4863#4864#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++  </component>
+   <component name="masterDetails">
+     <states>
+       <state key="ArtifactsStructureConfigurable.UI">
+@@ -527,7 +716,7 @@
+       </state>
+       <state key="JdkListConfigurable.UI">
+         <settings>
+-          <last-edited>1.7</last-edited>
++          <last-edited>1.8</last-edited>
+           <splitter-proportions>
+             <option name="proportions">
+               <list>
+@@ -551,7 +740,7 @@
+       </state>
+       <state key="ProjectLibrariesConfigurable.UI">
+         <settings>
+-          <last-edited>figureFrame</last-edited>
++          <last-edited>searchFrame</last-edited>
+           <splitter-proportions>
+             <option name="proportions">
+               <list>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1461101974000)
++++ .idea/misc.xml	(revision )
+@@ -1,5 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="EntryPointsManager">
++    <entry_points version="2.0" />
++  </component>
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+       <MavenGeneralSettings>
+@@ -17,7 +20,7 @@
+     <ConfirmationsSetting value="0" id="Add" />
+     <ConfirmationsSetting value="0" id="Remove" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/hanoitowers/Peg.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/hanoitowers/Peg.java	(date 1461101974000)
++++ src/hanoitowers/Peg.java	(revision )
+@@ -6,7 +6,6 @@
+ import java.awt.*;
+ import java.util.ArrayList;
+ 
+-
+ public class Peg extends Figure {
+ 
+ 
+Index: src/notepad/Notepad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/notepad/Notepad.java	(date 1461101974000)
++++ src/notepad/Notepad.java	(revision )
+@@ -1,5 +1,8 @@
+ package notepad;
+ 
++import bracechecker.BraceChecker;
++import searchFrame.SearchFrame;
++
+ import javax.swing.*;
+ import javax.swing.event.DocumentEvent;
+ import javax.swing.event.DocumentListener;
+@@ -32,7 +35,7 @@
+         textArea = new JTextArea();
+         resultMessageFile = new JTextField();
+         font = new Font("Font.PLAIN", Font.PLAIN, 22);
+-        braceChecker = new BraceChecker();
++        braceChecker = BraceChecker.getInstance();
+         textArea.setFont(font);
+         JPanel jPanel = new JPanel();
+         GridLayout layout = new GridLayout(1, 1);

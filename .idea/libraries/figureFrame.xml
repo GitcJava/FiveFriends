@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="figureFrame">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/figureFrame.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Common/figureFrame.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

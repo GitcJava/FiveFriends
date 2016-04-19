@@ -1,5 +1,8 @@
 package notepad;
 
+import bracechecker.BraceChecker;
+import searchFrame.SearchFrame;
+
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -32,7 +35,7 @@ public class Notepad extends JFrame {
         textArea = new JTextArea();
         resultMessageFile = new JTextField();
         font = new Font("Font.PLAIN", Font.PLAIN, 22);
-        braceChecker = new BraceChecker();
+        braceChecker = BraceChecker.getInstance();
         textArea.setFont(font);
         JPanel jPanel = new JPanel();
         GridLayout layout = new GridLayout(1, 1);
