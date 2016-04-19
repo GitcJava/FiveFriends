@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BraceChecker">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Common/braceChecker.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
