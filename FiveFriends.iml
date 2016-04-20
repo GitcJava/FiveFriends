@@ -7,8 +7,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="braceChecker" level="project" />
     <orderEntry type="library" name="figureFrame" level="project" />
+<<<<<<< Updated upstream
     <orderEntry type="library" name="BraceChecker" level="project" />
     <orderEntry type="library" name="SearchFrame" level="project" />
+=======
+    <orderEntry type="library" name="searchFrame" level="project" />
+>>>>>>> Stashed changes
   </component>
 </module>

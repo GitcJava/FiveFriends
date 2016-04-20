@@ -1,0 +1,845 @@
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(date 1461103616000)
++++ .idea/encodings.xml	(revision )
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/i18n" charset="windows-1251" />
+     <file url="PROJECT" charset="UTF-8" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: i18n/labels_ru.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- i18n/labels_ru.properties	(revision )
++++ i18n/labels_ru.properties	(revision )
+@@ -0,0 +1,2 @@
++new=Создать
++save=Сохранить
+\ No newline at end of file
+Index: .idea/resourceBundles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/resourceBundles.xml	(revision )
++++ .idea/resourceBundles.xml	(revision )
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ResourceBundleManager">
++    <file url="file://$PROJECT_DIR$/i18n/labels.properties" />
++    <file url="file://$PROJECT_DIR$/i18n/labels_hy.properties" />
++    <file url="file://$PROJECT_DIR$/i18n/labels_ru.properties" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(date 1461103616000)
++++ .idea/workspace.xml	(revision )
+@@ -2,21 +2,14 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="de5816a9-65c1-4f1d-b638-eb847ef062c8" name="Default" comment="">
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Common/braceChecker.jar" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/shelf/braceChecker2.jar" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Common/figureFrame.jar" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Common/searchFrame.jar" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/shelf/searchFrame2.jar" />
+-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/shelf/Import_the_class_notepad_and_bracechecker_,searchframe__jar_files_1.patch" />
+-      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\.idea\libraries\BraceChecker.xml" afterPath="" />
+-      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\.idea\libraries\SearchFrame.xml" afterPath="" />
+-      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\BraceChecker.jar" afterPath="" />
+-      <change type="DELETED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\SearchFrame.jar" afterPath="" />
+-      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\lib\figureFrame.jar" afterPath="$PROJECT_DIR$/.idea/shelf/figureFrame1.jar" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FiveFriends.iml" afterPath="$PROJECT_DIR$/FiveFriends.iml" />
++      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/i18n/labels.properties" />
++      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/i18n/labels_hy.properties" />
++      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/i18n/labels_ru.properties" />
++      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" />
++      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\BraceChecker.jar" afterPath="$PROJECT_DIR$/Common/braceChecker.jar" />
++      <change type="MOVED" beforePath="C:\Users\Gor\IdeaProjects\FiveFriends\Common\SearchFrame.jar" afterPath="$PROJECT_DIR$/Common/searchFrame.jar" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/notepad/Notepad.java" afterPath="$PROJECT_DIR$/src/notepad/Notepad.java" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/figureFrame.xml" afterPath="$PROJECT_DIR$/.idea/libraries/figureFrame.xml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
++      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+     </list>
+     <ignored path="$PROJECT_DIR$/out/" />
+@@ -41,17 +34,47 @@
+       <file leaf-file-name="Notepad.java" pinned="false" current-in-tab="true">
+         <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state vertical-scroll-proportion="3.5911415">
+-              <caret line="160" column="39" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
++            <state vertical-scroll-proportion="0.32904884">
++              <caret line="182" column="16" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+               <folding>
+                 <element signature="imports" expanded="true" />
+-                <element signature="e#4804#4805#0" expanded="true" />
+-                <element signature="e#4863#4864#0" expanded="true" />
++                <element signature="e#11330#11331#0" expanded="true" />
++                <element signature="e#11371#11372#0" expanded="true" />
+               </folding>
+             </state>
+           </provider>
+         </entry>
+       </file>
++      <file leaf-file-name="labels.properties" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/i18n/labels.properties">
++          <provider selected="true" editor-type-id="text-editor">
++            <state vertical-scroll-proportion="0.0">
++              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="labels_hy.properties" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/i18n/labels_hy.properties">
++          <provider selected="true" editor-type-id="text-editor">
++            <state vertical-scroll-proportion="0.0">
++              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="labels_ru.properties" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/i18n/labels_ru.properties">
++          <provider selected="true" editor-type-id="text-editor">
++            <state vertical-scroll-proportion="0.0">
++              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
+     </leaf>
+   </component>
+   <component name="Git.Settings">
+@@ -115,9 +138,6 @@
+       <sortByType />
+     </navigator>
+     <panes>
+-      <pane id="Scope" />
+-      <pane id="Scratches" />
+-      <pane id="PackagesPane" />
+       <pane id="ProjectPane">
+         <subPane>
+           <PATH>
+@@ -149,6 +169,10 @@
+               <option name="myItemId" value="src" />
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+             </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="notepad" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
+           </PATH>
+           <PATH>
+             <PATH_ELEMENT>
+@@ -160,12 +184,29 @@
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+             </PATH_ELEMENT>
+             <PATH_ELEMENT>
+-              <option name="myItemId" value="Common" />
++              <option name="myItemId" value="src" />
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+             </PATH_ELEMENT>
+           </PATH>
++          <PATH>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="FiveFriends" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="i18n" />
++              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
++            </PATH_ELEMENT>
++          </PATH>
+         </subPane>
+       </pane>
++      <pane id="PackagesPane" />
++      <pane id="Scratches" />
++      <pane id="Scope" />
+     </panes>
+   </component>
+   <component name="PropertiesComponent">
+@@ -177,15 +218,40 @@
+     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+     <property name="settings.editor.splitter.proportion" value="0.2" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Common/SearchFrame.jar!/" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Auditorium" />
+     <property name="FullScreen" value="false" />
++    <property name="recentsLimit" value="5" />
++    <property name="dynamic.classpath" value="false" />
+   </component>
+   <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Gor\IdeaProjects\FiveFriends" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\Gor\IdeaProjects\FiveFriends\Common" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Application.Notepad">
++    <configuration default="false" name="Notepad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
++        <pattern>
++          <option name="PATTERN" value="notepad.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="MAIN_CLASS_NAME" value="notepad.Notepad" />
++      <option name="VM_PARAMETERS" />
++      <option name="PROGRAM_PARAMETERS" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
++      <option name="ALTERNATIVE_JRE_PATH" />
++      <option name="ENABLE_SWING_INSPECTOR" value="false" />
++      <option name="ENV_VARIABLES" />
++      <option name="PASS_PARENT_ENVS" value="true" />
++      <module name="FiveFriends" />
++      <envs />
++      <method />
++    </configuration>
+     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+       <module name="" />
+       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+@@ -436,6 +502,14 @@
+     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+       <method />
+     </configuration>
++    <list size="1">
++      <item index="0" class="java.lang.String" itemvalue="Application.Notepad" />
++    </list>
++    <recent_temporary>
++      <list size="1">
++        <item index="0" class="java.lang.String" itemvalue="Application.Notepad" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="ShelveChangesManager" show_recycled="false">
+     <changelist date="1461101590965">
+@@ -481,7 +555,10 @@
+       <workItem from="1461101282804" duration="312000" />
+       <workItem from="1461101596303" duration="370000" />
+       <workItem from="1461102502487" duration="338000" />
+-      <workItem from="1461103435327" duration="168000" />
++      <workItem from="1461103435327" duration="841000" />
++      <workItem from="1461141612378" duration="3497000" />
++      <workItem from="1461169961623" duration="2127000" />
++      <workItem from="1461173806535" duration="1307000" />
+     </task>
+     <task id="LOCAL-00001" summary="Import the class notepad and bracechecker ,searchframe .jar files.">
+       <created>1461101591471</created>
+@@ -495,11 +572,17 @@
+       <option name="project" value="LOCAL" />
+       <updated>1461101816495</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Import the class notepad and bracechecker ,searchframe .jar files.">
++      <created>1461103616211</created>
++      <option name="number" value="00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1461103616211</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="1441000" />
++    <option name="totallyTimeSpent" value="9045000" />
+   </component>
+   <component name="ToolWindowManager">
+     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+@@ -507,31 +590,59 @@
+     <layout>
+       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
++      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
+-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32467532" sideWeight="0.4969605" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
++      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219512" sideWeight="0.4969605" order="8" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
++      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15653495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
++      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
++      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
++      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
++      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
++      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++    </layout>
++    <layout-to-restore>
++      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
++      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
++      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
++      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
++      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
++      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
++      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
++      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
++      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
++      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
++      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
++      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
++      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219512" sideWeight="0.4969605" order="8" side_tool="false" content_ui="tabs" />
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+-    </layout>
++      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
++    </layout-to-restore>
+   </component>
+   <component name="Vcs.Log.UiProperties">
+     <option name="RECENTLY_FILTERED_USER_GROUPS">
+@@ -565,12 +676,72 @@
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+           <folding>
+             <element signature="imports" expanded="true" />
+-            <element signature="e#4804#4805#0" expanded="true" />
+-            <element signature="e#4863#4864#0" expanded="true" />
++            <element signature="e#11330#11331#0" expanded="true" />
++            <element signature="e#11371#11372#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels.properties">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels_hy.properties">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels_ru.properties">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#11330#11331#0" expanded="true" />
++            <element signature="e#11371#11372#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#11330#11331#0" expanded="true" />
++            <element signature="e#11371#11372#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding>
++            <element signature="imports" expanded="true" />
++            <element signature="e#11330#11331#0" expanded="true" />
++            <element signature="e#11371#11372#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/src/hanoitowers/Peg.java">
+       <provider selected="true" editor-type-id="text-editor">
+         <state vertical-scroll-proportion="0.1734694">
+@@ -592,14 +763,41 @@
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels_ru.properties">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels_hy.properties">
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/i18n/labels.properties">
++      <provider editor-type-id="ResourceBundle">
++        <state />
++      </provider>
++      <provider selected="true" editor-type-id="text-editor">
++        <state vertical-scroll-proportion="0.0">
++          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/src/notepad/Notepad.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state vertical-scroll-proportion="3.5911415">
+-          <caret line="160" column="39" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
++        <state vertical-scroll-proportion="0.32904884">
++          <caret line="182" column="16" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+           <folding>
+             <element signature="imports" expanded="true" />
+-            <element signature="e#4804#4805#0" expanded="true" />
+-            <element signature="e#4863#4864#0" expanded="true" />
++            <element signature="e#11330#11331#0" expanded="true" />
++            <element signature="e#11371#11372#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+\ No newline at end of file
+Index: i18n/labels_hy.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- i18n/labels_hy.properties	(revision )
++++ i18n/labels_hy.properties	(revision )
+@@ -0,0 +1,2 @@
++new=\u054D\u057F\u0565\u0572\u056E\u0565\u056C
++save=\u054A\u0561\u0570\u057A\u0561\u0576\u0565\u056C
+\ No newline at end of file
+Index: src/notepad/Notepad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/notepad/Notepad.java	(date 1461103616000)
++++ src/notepad/Notepad.java	(revision )
+@@ -4,15 +4,11 @@
+ import searchFrame.SearchFrame;
+ 
+ import javax.swing.*;
+-import javax.swing.event.DocumentEvent;
+-import javax.swing.event.DocumentListener;
+ import java.awt.*;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
+-import java.io.File;
+-import java.io.FileInputStream;
+-import java.io.FileOutputStream;
+-import java.io.IOException;
++import java.io.*;
++import java.util.Properties;
+ 
+ public class Notepad extends JFrame {
+ 
+@@ -23,6 +19,11 @@
+     private Font font;
+     private BraceChecker braceChecker;
+     private File file;
++    private JMenuItem newFile;
++    private JMenuItem openFile;
++    private JMenuItem saveFile;
++    private JMenuItem savaAsFile;
++    private JMenuItem exitFile;
+ 
+     public Notepad() {
+         super(DEFAULT_NAME);
+@@ -50,9 +51,24 @@
+ 
+         //Add Menu
+         JMenu file = new JMenu("File");
++        JMenu mLang = new JMenu("Language");
+         menuBar.add(file);
++        menuBar.add(mLang);
+ 
++        //Language menu items
++        JMenuItem mItemEn = new JMenuItem(LanguageType.EN.getLabel());
++        JMenuItem mItemAm = new JMenuItem(LanguageType.AM.getLabel());
++        JMenuItem mItemRu = new JMenuItem(LanguageType.RU.getLabel());
++
++        mLang.add(mItemEn);
++        mLang.add(mItemAm);
++        mLang.add(mItemRu);
++
+         //Add MenuItem
++        Properties menuLabels = getMenuLabels(LanguageType.EN);
++        init(menuLabels);
++
++        //Add MenuItem
+         JMenuItem newFile = new JMenuItem("New");
+         JMenuItem openFile = new JMenuItem("Open");
+         JMenuItem saveFile = new JMenuItem("Save");
+@@ -68,6 +84,25 @@
+ 
+         // Add ActionListener
+ 
++        mItemEn.addActionListener(new ActionListener() {
++            @Override
++            public void actionPerformed(ActionEvent e) {
++                updateMenusLabels(LanguageType.EN);
++            }
++        });
++        mItemAm.addActionListener(new ActionListener() {
++            @Override
++            public void actionPerformed(ActionEvent e) {
++                updateMenusLabels(LanguageType.AM);
++            }
++        });
++        mItemRu.addActionListener(new ActionListener() {
++            @Override
++            public void actionPerformed(ActionEvent e) {
++                updateMenusLabels(LanguageType.RU);
++            }
++        });
++
+         newFile.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+@@ -113,49 +148,82 @@
+         setLocation(100, 100);
+         setVisible(true);
+         resultMessageFile.setFont(font);
+-        textArea.getDocument().addDocumentListener(new DocumentListener() {
+-            @Override
+-            public void insertUpdate(DocumentEvent e) {
+-                handleDocumentUpdate();
++//        textArea.getDocument().addDocumentListener(new DocumentListener() {
++//            @Override
++//            public void insertUpdate(DocumentEvent e) {
++//                handleDocumentUpdate();
++//            }
++//
++//            @Override
++//            public void removeUpdate(DocumentEvent e) {
++//                handleDocumentUpdate();
++//            }
++//
++//            @Override
++//            public void changedUpdate(DocumentEvent e) {
++//                handleDocumentUpdate();
++//            }
++//        });
++
+-            }
++    }
+ 
+-            @Override
+-            public void removeUpdate(DocumentEvent e) {
+-                handleDocumentUpdate();
++    private Properties getMenuLabels(LanguageType languageType) {
++        String posix = languageType == LanguageType.AM
++                ? "_" + LanguageType.AM.getLabel()
++                : languageType == LanguageType.RU
++                ? "_" + LanguageType.RU.getLabel()
++                : "";
++
++        InputStream is = getClass()
++                .getClassLoader()
++                .getResourceAsStream("i18n/labels" + posix + ".properties");
++
++        Properties labels = new Properties();
++        try {
++            labels.load(is);
++
++        } catch (IOException e) {
++            e.printStackTrace();
+-            }
++        }
+ 
+-            @Override
+-            public void changedUpdate(DocumentEvent e) {
+-                handleDocumentUpdate();
++        return labels;
+-            }
++    }
+-        });
+ 
++    private void init(Properties labelKeys) {
++        newFile = new JMenuItem(labelKeys.getProperty(LabelKey.NEW.getName()));
++        openFile = new JMenuItem("Open");
++        saveFile = new JMenuItem(labelKeys.getProperty(LabelKey.SAVE.getName()));
++        savaAsFile = new JMenuItem("Save as");
++        exitFile = new JMenuItem("Exit");
+     }
+ 
+-    void handleDocumentUpdate() {
+-        if (!braceChecker.parse(textArea.getText())) {
+-            resultMessageFile.setForeground(Color.red);
+-            resultMessageFile.setText(braceChecker.getMessage());
+-        } else {
+-            resultMessageFile.setForeground(Color.darkGray);
+-            resultMessageFile.setText("No Error");
++    private void updateMenusLabels(LanguageType languageType) {
++        Properties labels = getMenuLabels(languageType);
++
++        newFile.setText(labels.getProperty(LabelKey.NEW.getName()));
++        openFile.setText("Open");
++        saveFile.setText(labels.getProperty(LabelKey.SAVE.getName()));
++        savaAsFile.setText("Save as");
++        //searchFile.setText("Search");
++        exitFile.setText("Exit");
+-        }
++    }
+-    }
+ 
++//    void handleDocumentUpdate() {
++//        if (!braceChecker.parse(textArea.getText())) {
++//            resultMessageFile.setForeground(Color.red);
++//            resultMessageFile.setText(braceChecker.getMessage());
++//        } else {
++//            resultMessageFile.setForeground(Color.darkGray);
++//            resultMessageFile.setText("No Error");
++//        }
++//    }
++
+     private void handleExitAction() {
+-        if (textArea.getText().equals("") || isTextEquals(file)) {
++        if (isChanged() && !handleSaveActionConfirm(ActionType.EXIT)) {
++            return;
++        }
+-            exit();
++        exit();
+-        } else {
+-            switch (askSave()) {
+-                case 0:
+-                    saveAs();
+-                    exit();
+-                    break;
+-                case 1:
+-                    exit();
+-            }
++    }
+-        }
+-    }
+ 
+     private void searchFileAction(ActionEvent e) {
+         SearchFrame searchFrame = new SearchFrame();
+@@ -170,33 +238,43 @@
+     }
+ 
+ 
++
+     private void openAction(ActionEvent e) {
+-        if (textArea.getText().equals("") || isTextEquals(file)) {
++        if (isChanged()) {
++            if (!handleSaveActionConfirm(ActionType.OPEN)) {
++                return;
++            }
++        }
+-            open();
++        open();
+-        } else {
++    }
++    /**
++     * Opens a confirm dialog window to ask
++     * save or no the content of TextArea or cancel the action.
++     * if save is chosen then the content save,  otherwise if selected no nothing is saved.
++     *
++     * @return false if selected cancel option, otherwise true.
++     */
++    private boolean handleSaveActionConfirm(ActionType actionType) {
+-            switch (askSave()) {
++        switch (askSave()) {
+-                case 0:
++            case JOptionPane.CANCEL_OPTION:
++                return false;
++            case JOptionPane.YES_OPTION:
++                if ((ActionType.SAVE_AS == actionType) || isNewMode()) {
+                     saveAs();
+-                    break;
+-                case 1:
+-                    open();
+-                    break;
++                } else {
++                    save();
+-            }
++                }
+         }
++
++        return true;
+     }
+ 
+     private void newAction(ActionEvent e) {
+-
+-        switch (askSave()) {
+-            case 0:
+-                saveAs();
++        if (isChanged() && !handleSaveActionConfirm(ActionType.NEW)) {
++            return;
++        }
+-                newFile();
++        newFile();
+-                break;
+-            case 1:
+-                newFile();
+-                break;
+-        }
++    }
+-    }
+ 
+     public void exit() {
+         System.exit(0);
+@@ -230,7 +308,6 @@
+         }
+     }
+ 
+-
+     public void write(File file, String text) {
+         String path;
+         if (!file.getName().contains(".txt")) {
+@@ -277,18 +354,69 @@
+         return returnVal;
+     }
+ 
++    private boolean isLoadedTextChenged(File file) {
++        if (file == null) {
++            return false;
++        }
++        return !textArea.getText().equals(read(file));
++    }
++
++    private boolean isNewMode() {
++        return file == null;
++    }
++
+     private boolean isChanged() {
+-        if (file == null && textArea.getText().trim().length() > 0) {
++        if (isNewMode() && textArea.getText().length() > 0) {
+             return true;
+-        } else if (file != null && file.exists() && textArea.getText().equals("")) {
+-
+-            save();
+-            exit();
++        } else if (!isNewMode() && isLoadedTextChenged(file)) {
++            return true;
+         }
+         return false;
+     }
+ 
++    enum ActionType {NEW, SAVE, SAVE_AS, OPEN, EXIT}
++
+     public static void main(String[] args) {
+         Notepad n = new Notepad();
+     }
++
+ }
++
++enum LabelKey {
++    NEW("new"),
++    SAVE("save"),
++    SAVE_AS("saveas"),
++    OPEN("open"),
++    EXIT("exit");
++
++    LabelKey(String val) {
++        this.name = val;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    private final String name;
++}
++
++class LanguageType {
++    static final LanguageType AM = new LanguageType(1, "am", "Armenian");
++    static final LanguageType EN = new LanguageType(2, "en", "English");
++    static final LanguageType RU = new LanguageType(3, "ru", "Russian");
++
++    private LanguageType(int value, String label, String description) {
++        this.value = value;
++        this.label = label;
++        this.description = description;
++    }
++
++    String getLabel() {
++        return label;
++    }
++
++    private final int value;
++    private final String label;
++    private final String description;
++}
++
+Index: i18n/labels.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+--- i18n/labels.properties	(revision )
++++ i18n/labels.properties	(revision )
+@@ -0,0 +1,2 @@
++new=New
++save=Save

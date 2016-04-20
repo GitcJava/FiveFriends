@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="SearchFrame">
+  <library name="searchFrame">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Common/searchFrame.jar!/" />
     </CLASSES>

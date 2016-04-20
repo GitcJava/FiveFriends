@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="BraceChecker">
+  <library name="braceChecker">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Common/braceChecker.jar!/" />
     </CLASSES>
