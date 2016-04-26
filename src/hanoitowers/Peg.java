@@ -1,7 +1,7 @@
 package hanoitowers;
 
 
-import figures.Figure;
+import figure.Figure;
 
 import java.awt.*;
 import java.util.ArrayList;

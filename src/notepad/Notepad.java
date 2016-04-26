@@ -1,7 +1,7 @@
 package notepad;
 
-import bracechecker.BraceChecker;
-import searchFrame.SearchFrame;
+
+import util.BraceChecker;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -95,12 +95,12 @@ public class Notepad extends JFrame {
             }
         });
 
-        searchFile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                searchFileAction(e);
-            }
-        });
+       // searchFile.addActionListener(new ActionListener() {
+       //     @Override
+       //     public void actionPerformed(ActionEvent e) {
+       //         searchFileAction(e);
+       //     }
+       // });
 
         exitFile.addActionListener(new ActionListener() {
             @Override
@@ -157,9 +157,9 @@ public class Notepad extends JFrame {
         }
     }
 
-    private void searchFileAction(ActionEvent e) {
-        SearchFrame searchFrame = new SearchFrame();
-    }
+ //   private void searchFileAction(ActionEvent e) {
+ //       SearchFrame searchFrame = new SearchFrame();
+ //   }
 
     private void savaAsFileAction(ActionEvent e) {
         saveAs();
