@@ -6,7 +6,6 @@ public class BraceChecker {
     public static final int CLOSED_BUT_NOT_OPENED = 1;
     public static final int OPENED_BUT_CLOSED_ANOTHER = 3;
     private static BraceChecker instance;
-    private static UnderlineHighlighter.UnderlineHighlightPainter underlineHighlighter;
     /**
      * TO store the opened brackets in text to be parsed
      */
@@ -90,8 +89,7 @@ public class BraceChecker {
         }
         if (!isPassed) {
             if (stackLastElement == null) {
-//                message = "closed '" + ch + "' but not opened ";
-                underlineHighlighter.paintLayer();
+                message = "closed '" + ch + "' but not opened ";
             } else {
                 message = "opened '" + stackLastElement.getValue() + "' but closed '" + ch + "'";
             }

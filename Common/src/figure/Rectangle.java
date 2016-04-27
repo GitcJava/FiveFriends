@@ -7,6 +7,7 @@ public class Rectangle extends Figure {
 
     private Thread mult;
 
+
     public Rectangle(int x, int y, int width, int height) {
         this(x, y, width, height, Color.green);
     }

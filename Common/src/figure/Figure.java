@@ -10,6 +10,7 @@ public abstract class Figure implements Runnable {
     private int height;
     private Color color;
 
+
     /**
      * Speed of this Figure by x coordinate
      */
@@ -86,7 +87,7 @@ public abstract class Figure implements Runnable {
     public abstract boolean isBelong(int x, int y);
 
     @Override
-    public void run(){
+    public void run() {
 
         while (isRunning) {
             try {
@@ -97,6 +98,7 @@ public abstract class Figure implements Runnable {
             start();
         }
     }
+
     public void start() {
         t.start();
     }

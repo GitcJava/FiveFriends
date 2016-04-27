@@ -17,7 +17,7 @@ public class StackImpl<E> implements Stack<E> {
      */
     private int tos;
 
-//    START OF CONSTRUCTORS' BLOCK
+    //    START OF CONSTRUCTORS' BLOCK
     public StackImpl(int capacity) {
         this.storage = new Object[capacity];
         this.tos = -1;
@@ -30,7 +30,7 @@ public class StackImpl<E> implements Stack<E> {
 
     @Override
     public void push(E value) {
-        if (tos == storage.length - 1){
+        if (tos == storage.length - 1) {
             extendStorage();
         }
         storage[++tos] = value;
@@ -38,21 +38,20 @@ public class StackImpl<E> implements Stack<E> {
 
     @Override
     public E pop() {
-        if (tos == -1){
+        if (tos == -1) {
             return null;
         }
-        return (E)storage[tos--];
+        return (E) storage[tos--];
     }
 
     private void extendStorage() {
-        Object[] temp = new Object[1 + storage.length +  storage.length/2];
+        Object[] temp = new Object[1 + storage.length + storage.length / 2];
         System.arraycopy(storage, 0, temp, 0, storage.length);
         storage = temp;
     }
 
     public static void main(String[] args) {
         StackImpl box = new StackImpl();
-
 
 
         for (int i = 0; i < 10; i++) {
