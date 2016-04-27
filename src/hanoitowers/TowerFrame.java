@@ -7,16 +7,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TowerFrame extends JFrame {
- static JTextField jTextField;
+    static JTextField jTextField;
     TowerCanvas towerCanvas;
 
-    public TowerFrame(){
+    public TowerFrame() {
         super("Hanoi Tower");
         JPanel panel = new JPanel();
         panel.setBackground(Color.BLUE);
         towerCanvas = new TowerCanvas();
         jTextField = new JTextField("3", 2);
-        JButton  addButton = new JButton("add");
+        JButton addButton = new JButton("add");
         JButton resetButton = new JButton("reset");
         JButton playButton = new JButton("play");
 
@@ -24,7 +24,7 @@ public class TowerFrame extends JFrame {
         panel.add(addButton);
         panel.add(resetButton);
         panel.add(playButton);
-        
+
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,21 +54,21 @@ public class TowerFrame extends JFrame {
 
     private void addAction() {
 
-          try{
-              int c  = Integer.parseInt(jTextField.getText());
-              if (c > 7){
-                  JOptionPane.showMessageDialog(null,"please write to number smoll than 7");
-              }else {
-                  towerCanvas.addDisc(c);
-              }
-          }catch (NumberFormatException e){
-              e.printStackTrace();
-              JOptionPane.showMessageDialog(null,"please write to number");
-          }
+        try {
+            int c = Integer.parseInt(jTextField.getText());
+            if (c > 7) {
+                JOptionPane.showMessageDialog(null, "please write to number smoll than 7");
+            } else {
+                towerCanvas.addDisc(c);
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "please write to number");
+        }
     }
 
     public static void main(String[] args) {
         TowerFrame towerFrame = new TowerFrame();
 
-           }
+    }
 }
