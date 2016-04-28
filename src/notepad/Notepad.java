@@ -20,7 +20,7 @@ public class Notepad extends JFrame {
     private Font font;
     private BraceChecker braceChecker;
     private File file;
-    
+
     private JMenuItem newFile;
     private JMenuItem openFile;
     private JMenuItem saveFile;
@@ -72,17 +72,10 @@ public class Notepad extends JFrame {
 
 
         //Add MenuItem
-        JMenuItem newFile = new JMenuItem("New");
-        JMenuItem openFile = new JMenuItem("Open");
-        JMenuItem saveFile = new JMenuItem("Save");
-        JMenuItem savaAsFile = new JMenuItem("Save as");
-        JMenuItem searchFile = new JMenuItem("Search");
-        JMenuItem exitFile = new JMenuItem("Exit");
         file.add(newFile);
         file.add(openFile);
         file.add(saveFile);
         file.add(savaAsFile);
-        file.add(searchFile);
         file.add(exitFile);
 
         // Add ActionListener
@@ -182,20 +175,20 @@ public class Notepad extends JFrame {
 
     private void init(Properties labelKeys) {
         newFile = new JMenuItem(labelKeys.getProperty(LabelKey.NEW.getName()));
-        openFile = new JMenuItem("Open");
+        openFile = new JMenuItem(labelKeys.getProperty(LabelKey.OPEN.getName()));
         saveFile = new JMenuItem(labelKeys.getProperty(LabelKey.SAVE.getName()));
-        savaAsFile = new JMenuItem("Save as");
-        exitFile = new JMenuItem("Exit");
+        savaAsFile = new JMenuItem(labelKeys.getProperty(LabelKey.SAVE_AS.getName()));
+        exitFile = new JMenuItem(labelKeys.getProperty(LabelKey.EXIT.getName()));
     }
 
     private void updateMenusLabels(LanguageType languageType) {
         Properties labels = getMenuLabels(languageType);
 
         newFile.setText(labels.getProperty(LabelKey.NEW.getName()));
-        openFile.setText("Open");
+        openFile.setText(labels.getProperty(LabelKey.OPEN.getName()));
         saveFile.setText(labels.getProperty(LabelKey.SAVE.getName()));
-        savaAsFile.setText("Save as");
-        exitFile.setText("Exit");
+        savaAsFile.setText(labels.getProperty(LabelKey.SAVE_AS.getName()));
+        exitFile.setText(labels.getProperty(LabelKey.EXIT.getName()));
     }
 
 
