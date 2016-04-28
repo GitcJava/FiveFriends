@@ -28,6 +28,20 @@ public class Peg extends Figure {
         this.towerCanvas = towerCanvas;
     }
 
+    private void moveUp (Peg to){
+        while (getLast().getY() > getY() - 50){
+            getLast().move(0, -4);
+            try {
+                Thread.sleep(30);
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            towerCanvas.repaint();
+        }
+        to.discs.add(discs.remove(discs.size() - 1));
+    }
+
+    private  Figure getLast(){return discs.get(discs.size()-1);}
 
     public int getxBottom() {
         return xBottom;
@@ -61,6 +75,18 @@ public class Peg extends Figure {
         this.heightBottom = heightBottom;
     }
 
+    public void move (int x, int y){
+        setX(getX()+ x);
+        setY(getY()+y);
+        setxBottom(getxBottom() + x);
+        setyBottom(getyBottom() + y);
+        for (Figure f : discs) {
+            f.move(x,y);
+        }
+        towerCanvas.repaint();
+
+    }
+
 
     @Override
     public boolean isBelong(int i, int i1) {
@@ -69,7 +95,16 @@ public class Peg extends Figure {
 
 
     @Override
-    public void draw(Graphics graphics) {
-        System.out.println();
+    public void draw(Graphics g) {
+        g.setColor(getColor());
+        g.fillRect(getX(),getY(), getWidth(), getHeight());
+        g.fillRect(getxBottom(),getyBottom(),getWidthBottom(),getHeightBottom());
+        for (Figure f : discs) {
+            f.draw(g);
+        }
+
+
+
+
     }
 }

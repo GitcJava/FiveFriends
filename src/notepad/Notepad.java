@@ -1,5 +1,6 @@
 package notepad;
 
+
 import util.BraceChecker;
 
 import javax.swing.*;

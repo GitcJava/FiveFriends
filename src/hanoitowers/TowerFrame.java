@@ -17,6 +17,7 @@ public class TowerFrame extends JFrame {
         towerCanvas = new TowerCanvas();
         jTextField = new JTextField("3", 2);
         JButton addButton = new JButton("add");
+
         JButton resetButton = new JButton("reset");
         JButton playButton = new JButton("play");
 
@@ -68,7 +69,8 @@ public class TowerFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        TowerFrame towerFrame = new TowerFrame();
+        TowerFrame
+                towerFrame = new TowerFrame();
 
     }
 }
