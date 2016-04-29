@@ -2,6 +2,7 @@ package notepad;
 
 
 import util.BraceChecker;
+import util.SearchFrame;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -55,13 +56,16 @@ public class Notepad extends JFrame {
         //Add Menu
         JMenu file = new JMenu("File");
         JMenu mLang = new JMenu("Language");
+        JMenu tools = new JMenu("Tools");
         menuBar.add(file);
         menuBar.add(mLang);
+        menuBar.add(tools);
 
         //Language menu items
         JMenuItem mItemEn = new JMenuItem(LanguageType.EN.getLabel());
         JMenuItem mItemAm = new JMenuItem(LanguageType.AM.getLabel());
         JMenuItem mItemRu = new JMenuItem(LanguageType.RU.getLabel());
+        JMenuItem search = new JMenuItem("Search");
 
         mLang.add(mItemEn);
         mLang.add(mItemAm);
@@ -78,8 +82,15 @@ public class Notepad extends JFrame {
         file.add(saveFile);
         file.add(savaAsFile);
         file.add(exitFile);
+        tools.add(search);
 
         // Add ActionListener
+        search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleSearchAction(e);
+            }
+        });
         mItemEn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -153,6 +164,10 @@ public class Notepad extends JFrame {
                 handleDocumentUpdate();
             }
         });
+    }
+
+    private void handleSearchAction(ActionEvent e) {
+        SearchFrame searchFrame = new SearchFrame();
     }
 
     private Properties getMenuLabels(LanguageType languageType) {
