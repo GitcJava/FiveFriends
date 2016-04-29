@@ -9,10 +9,6 @@ import java.io.FileFilter;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
-/**
- * Created by TARON on 4/24/2014.
- */
-
 public class SearchFrame {
 
     static FileFolderFilter filter = new FileFolderFilter();
@@ -45,8 +41,8 @@ public class SearchFrame {
         scrollPane1.getViewport().add(resultArea);
         searchFrame.add(scrollPane1, BorderLayout.CENTER);
         resultArea.setEditable(false);
-        searchFrame.setLocation(500, 300);
-        searchFrame.setSize(700, 500);
+        searchFrame.setLocation(200, 200);
+        searchFrame.setSize(600, 400);
         searchFrame.setVisible(true);
         font = new Font("Font.PLAIN", Font.PLAIN, 14);
 
@@ -125,10 +121,7 @@ public class SearchFrame {
         search0(resultList, searchDir, searchmask);
         return resultList;
     }
-
-
 }
-
 
 class FileFolderFilter implements FileFilter {
 
