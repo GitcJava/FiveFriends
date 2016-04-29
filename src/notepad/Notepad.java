@@ -1,6 +1,7 @@
 package notepad;
 
 
+
 import util.BraceChecker;
 import util.SearchFrame;
 
