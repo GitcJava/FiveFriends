@@ -4,24 +4,19 @@ package notepad;
 
 import util.BraceChecker;
 import util.SearchFrame;
-import util.UnderlineHighlighter;
-import util.MistakeHighlighter;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.Highlighter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.net.URL;
 
 
 public class Notepad extends JFrame {
 
     private static final String DEFAULT_NAME = "Notepad";
-    private int fontsize = 15;
     private JTextArea textArea;
     private JTextField resultMessageFile;
     private JFileChooser jFileChooser;
@@ -29,11 +24,6 @@ public class Notepad extends JFrame {
     private BraceChecker braceChecker;
     private File file;
     private NotepadMenuBar notepadMenu;
-   // private WordSearch wordSearch;
-    private  Highlighter.HighlightPainter painter;
-    private Highlighter highlighter;
-    private MistakeHighlighter mistakeHighlighter;
-
 
 
     public Notepad() {
@@ -46,104 +36,16 @@ public class Notepad extends JFrame {
         notepadMenu = new NotepadMenuBar();
         jFileChooser = new JFileChooser();
         textArea = new JTextArea();
-        highlighter = new UnderlineHighlighter(null);
-
-        textArea.setHighlighter(highlighter);
         resultMessageFile = new JTextField();
-        font = new Font("Font.PLAIN", Font.PLAIN, 15);
+        font = new Font("Font.PLAIN", Font.PLAIN, 22);
         braceChecker = BraceChecker.getInstance();
         textArea.setFont(font);
-        JScrollPane scrollPain =new JScrollPane();
         JPanel jPanel = new JPanel();
         GridLayout layout = new GridLayout(1, 1);
         jPanel.setLayout(layout);
         jPanel.add(resultMessageFile);
-        add(jPanel, BorderLayout.SOUTH);
-        JToolBar toolBar = new JToolBar();
-        add(toolBar, BorderLayout.PAGE_START);
-        add(scrollPain, BorderLayout.CENTER);
-        toolBar.setAlignmentX(0);
         add(textArea, BorderLayout.CENTER);
-
-
-
-        JButton newbutton = new JButton(createImageIcon("icons\\New.png"));
-        newbutton.setToolTipText("New");
-        toolBar.add(newbutton);
-
-
-
-        newbutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                newAction(e);
-            }
-        });
-
-        JButton savebutton =new JButton(createImageIcon("icons\\Save.png"));
-        savebutton.setToolTipText("Save");
-        toolBar.add(savebutton);
-
-        savebutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                saveAction(e);
-            }
-        });
-
-
-        JButton openbutton =new JButton(createImageIcon("icons\\Open.png"));
-        openbutton.setToolTipText("Open");
-        toolBar.add(openbutton);
-
-        openbutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                openAction(e);
-
-            }
-        });
-
-        final JButton zoomInbutton =new JButton(createImageIcon("icons\\ZoomIn.png"));
-        zoomInbutton.setToolTipText("ZoomIn");
-        toolBar.add(zoomInbutton);
-
-
-        zoomInbutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                zoomInAction(e);
-
-            }
-        });
-
-        JButton zoomOutbutton =new JButton(createImageIcon("icons\\ZoomOut.png"));
-        zoomOutbutton.setToolTipText("ZoomOut");
-        toolBar.add(zoomOutbutton);
-
-        zoomOutbutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                zoomOutAction(e);
-
-            }
-        });
-
-
-
-        JButton exitbutton = new JButton(createImageIcon("icons\\Exit.png"));
-        exitbutton.setToolTipText("Exit");
-        toolBar.add(exitbutton);
-
-        exitbutton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                handleExitAction();
-            }
-        });
-
-
-
+        add(jPanel, BorderLayout.SOUTH);
 
 
         setJMenuBar(notepadMenu);
@@ -211,43 +113,35 @@ public class Notepad extends JFrame {
         setLocation(100, 100);
         setVisible(true);
         resultMessageFile.setFont(font);
-        mistakeHighlighter = new MistakeHighlighter(textArea);
         textArea.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                handleDocumentUpdate(e);
+                handleDocumentUpdate();
             }
 
             
             @Override
             public void removeUpdate(DocumentEvent e) {
-                handleDocumentUpdate(e);
+                handleDocumentUpdate();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-               // handleDocumentUpdate();
+                handleDocumentUpdate();
             }
         });
     }
-
-
 
     private void handleSearchAction(ActionEvent e) {
         SearchFrame searchFrame = new SearchFrame();
     }
 
 
-    void handleDocumentUpdate(DocumentEvent e) {
+    void handleDocumentUpdate() {
         if (!braceChecker.parse(textArea.getText())) {
-            highlighter = MistakeHighlighter.comp.getHighlighter();
-            mistakeHighlighter.search(textArea.getText());
-
             resultMessageFile.setForeground(Color.red);
             resultMessageFile.setText(braceChecker.getMessage());
         } else {
-            highlighter.removeAllHighlights();
-
             resultMessageFile.setForeground(Color.darkGray);
             resultMessageFile.setText("No Error");
         }
@@ -298,25 +192,6 @@ public class Notepad extends JFrame {
             return;
         }
         newFile();
-    }
-
-    private  void zoomInAction(ActionEvent e){
-        if(fontsize <50){
-            fontsize += 2;
-            font = new Font("Font.PLAIN",Font.PLAIN,fontsize);
-            textArea.setFont(font);
-
-        }
-
-    }
-    private  void zoomOutAction(ActionEvent e){
-        if(fontsize >5){
-            fontsize -= 2;
-            font = new Font("Font.PLAIN",Font.PLAIN,fontsize);
-            textArea.setFont(font);
-
-        }
-
     }
 
     public void exit() {
@@ -382,8 +257,7 @@ public class Notepad extends JFrame {
         return new String(b);
     }
 
-
-    public boolean isLoadedTextChenged(File file) {
+    private boolean isLoadedTextChenged(File file) {
         if (file == null) {
             return false;
         }
@@ -412,18 +286,5 @@ public class Notepad extends JFrame {
     public static void main(String[] args) {
         Notepad n = new Notepad();
     }
-    public static ImageIcon createImageIcon (String path){
-        URL imageIconURL = NotepadMenuBar.class.getResource(path);
-        if (imageIconURL != null) {
-            return  new ImageIcon(imageIconURL );
-
-        }else{
-            System.err.println("Could not find  File " + path);
-            return null;
-        }
-
-    }
-
 }
-
 

@@ -44,10 +44,6 @@ class NotepadMenuBar extends JMenuBar {
         file.add(exitFile);
         tools.add(search);
 
-
-
-
-
     }
 
     public void init(Properties labelKeys) {
@@ -111,7 +107,7 @@ enum LabelKey {
 }
 
 class LanguageType {
-    static final LanguageType AM = new LanguageType(1, "hy", "Armenian");
+    static final LanguageType AM = new LanguageType(1, "am", "Armenian");
     static final LanguageType EN = new LanguageType(2, "en", "English");
     static final LanguageType RU = new LanguageType(3, "ru", "Russian");
 
