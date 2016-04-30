@@ -11,7 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.Properties;
+
 
 public class Notepad extends JFrame {
 
@@ -22,12 +22,8 @@ public class Notepad extends JFrame {
     private Font font;
     private BraceChecker braceChecker;
     private File file;
+    private NotepadMenuBar notepadMenu;
 
-    private JMenuItem newFile;
-    private JMenuItem openFile;
-    private JMenuItem saveFile;
-    private JMenuItem savaAsFile;
-    private JMenuItem exitFile;
 
     public Notepad() {
         super(DEFAULT_NAME);
@@ -36,6 +32,7 @@ public class Notepad extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        notepadMenu = new NotepadMenuBar();
         jFileChooser = new JFileChooser();
         textArea = new JTextArea();
         resultMessageFile = new JTextField();
@@ -49,95 +46,62 @@ public class Notepad extends JFrame {
         add(textArea, BorderLayout.CENTER);
         add(jPanel, BorderLayout.SOUTH);
 
-        // Add MenuBar
-        JMenuBar menuBar = new JMenuBar();
-        setJMenuBar(menuBar);
 
-        //Add Menu
-        JMenu file = new JMenu("File");
-        JMenu mLang = new JMenu("Language");
-        JMenu tools = new JMenu("Tools");
-        menuBar.add(file);
-        menuBar.add(mLang);
-        menuBar.add(tools);
-
-        //Language menu items
-        JMenuItem mItemEn = new JMenuItem(LanguageType.EN.getLabel());
-        JMenuItem mItemAm = new JMenuItem(LanguageType.AM.getLabel());
-        JMenuItem mItemRu = new JMenuItem(LanguageType.RU.getLabel());
-        JMenuItem search = new JMenuItem("Search");
-
-        mLang.add(mItemEn);
-        mLang.add(mItemAm);
-        mLang.add(mItemRu);
-
-        //Add MenuItem
-        Properties menuLabels = getMenuLabels(LanguageType.EN);
-        init(menuLabels);
-
-
-        //Add MenuItem
-        file.add(newFile);
-        file.add(openFile);
-        file.add(saveFile);
-        file.add(savaAsFile);
-        file.add(exitFile);
-        tools.add(search);
-
+        setJMenuBar(notepadMenu);
         // Add ActionListener
-        search.addActionListener(new ActionListener() {
+        notepadMenu.search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 handleSearchAction(e);
             }
         });
-        mItemEn.addActionListener(new ActionListener() {
+        notepadMenu.mItemEn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateMenusLabels(LanguageType.EN);
+                notepadMenu.updateMenusLabels(LanguageType.EN);
             }
         });
-        mItemAm.addActionListener(new ActionListener() {
+        notepadMenu.mItemAm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateMenusLabels(LanguageType.AM);
+                notepadMenu.updateMenusLabels(LanguageType.AM);
             }
         });
-        mItemRu.addActionListener(new ActionListener() {
+        notepadMenu.mItemRu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateMenusLabels(LanguageType.RU);
+                notepadMenu.updateMenusLabels(LanguageType.RU);
             }
         });
 
-        newFile.addActionListener(new ActionListener() {
+        notepadMenu.newFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 newAction(e);
             }
         });
-        openFile.addActionListener(new ActionListener() {
+        notepadMenu.openFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openAction(e);
             }
         });
 
-        saveFile.addActionListener(new ActionListener() {
+        notepadMenu.saveFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 saveAction(e);
             }
         });
 
-        savaAsFile.addActionListener(new ActionListener() {
+        notepadMenu.savaAsFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 savaAsFileAction(e);
             }
         });
 
-        exitFile.addActionListener(new ActionListener() {
+        notepadMenu.exitFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 handleExitAction();
@@ -168,43 +132,6 @@ public class Notepad extends JFrame {
 
     private void handleSearchAction(ActionEvent e) {
         SearchFrame searchFrame = new SearchFrame();
-    }
-
-    private Properties getMenuLabels(LanguageType languageType) {
-        String posix = languageType == LanguageType.AM
-                ? "_" + LanguageType.AM.getLabel()
-                : languageType == LanguageType.RU
-                ? "_" + LanguageType.RU.getLabel()
-                : "";
-        InputStream is = getClass()
-                .getClassLoader()
-                .getResourceAsStream("i18n/labels" + posix + ".properties");
-        Properties labels = new Properties();
-        try {
-            labels.load(is);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return labels;
-    }
-
-    private void init(Properties labelKeys) {
-        newFile = new JMenuItem(labelKeys.getProperty(LabelKey.NEW.getName()));
-        openFile = new JMenuItem(labelKeys.getProperty(LabelKey.OPEN.getName()));
-        saveFile = new JMenuItem(labelKeys.getProperty(LabelKey.SAVE.getName()));
-        savaAsFile = new JMenuItem(labelKeys.getProperty(LabelKey.SAVE_AS.getName()));
-        exitFile = new JMenuItem(labelKeys.getProperty(LabelKey.EXIT.getName()));
-    }
-
-    private void updateMenusLabels(LanguageType languageType) {
-        Properties labels = getMenuLabels(languageType);
-
-        newFile.setText(labels.getProperty(LabelKey.NEW.getName()));
-        openFile.setText(labels.getProperty(LabelKey.OPEN.getName()));
-        saveFile.setText(labels.getProperty(LabelKey.SAVE.getName()));
-        savaAsFile.setText(labels.getProperty(LabelKey.SAVE_AS.getName()));
-        exitFile.setText(labels.getProperty(LabelKey.EXIT.getName()));
     }
 
 
@@ -353,49 +280,9 @@ public class Notepad extends JFrame {
         return file == null;
     }
 
-    enum ActionType {NEW, SAVE, SAVE_AS, OPEN, EXIT}
 
     public static void main(String[] args) {
         Notepad n = new Notepad();
     }
 }
 
-enum LabelKey {
-    NEW("new"),
-    SAVE("save"),
-    SAVE_AS("saveas"),
-    OPEN("open"),
-    EXIT("exit");
-
-    LabelKey(String val) {
-        this.name = val;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    private final String name;
-}
-
-
-class LanguageType {
-    static final LanguageType AM = new LanguageType(1, "am", "Armenian");
-    static final LanguageType EN = new LanguageType(2, "en", "English");
-    static final LanguageType RU = new LanguageType(3, "ru", "Russian");
-
-    private LanguageType(int value, String label, String description) {
-        this.value = value;
-        this.label = label;
-        this.description = description;
-    }
-
-    String getLabel() {
-        return label;
-    }
-
-    private final int value;
-    private final String label;
-    private final String description;
-
-}
