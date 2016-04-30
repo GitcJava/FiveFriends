@@ -17,7 +17,6 @@ class NotepadMenuBar extends JMenuBar {
     public JMenuItem mItemAm;
     public JMenuItem mItemRu;
 
-
     public NotepadMenuBar() {
         JMenu file = new JMenu("File");
         JMenu mLang = new JMenu("Language");
@@ -86,9 +85,10 @@ class NotepadMenuBar extends JMenuBar {
 
 }
 
-enum ActionType {NEW, SAVE, SAVE_AS, OPEN, EXIT}
+enum  ActionType {NEW, SAVE, SAVE_AS, OPEN, EXIT}
 
 enum LabelKey {
+
     NEW("new"),
     SAVE("save"),
     SAVE_AS("saveas"),
@@ -110,6 +110,7 @@ class LanguageType {
     static final LanguageType AM = new LanguageType(1, "am", "Armenian");
     static final LanguageType EN = new LanguageType(2, "en", "English");
     static final LanguageType RU = new LanguageType(3, "ru", "Russian");
+
 
     private LanguageType(int value, String label, String description) {
         this.value = value;
