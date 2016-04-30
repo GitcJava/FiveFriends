@@ -20,6 +20,7 @@ public class Circle extends Figure {
         g.fillOval(getX(), getY(), getWidth(), getHeight());
     }
 
+
     @Override
     public boolean isBelong(int x, int y) { // (x, y)   (getX() + getWidth()/2 , getY() + getWidth()/2)
         return (x - getX() - getWidth() / 2) * (x - getX() - getWidth() / 2)
