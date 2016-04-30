@@ -119,6 +119,7 @@ public class Notepad extends JFrame {
                 handleDocumentUpdate();
             }
 
+            
             @Override
             public void removeUpdate(DocumentEvent e) {
                 handleDocumentUpdate();
