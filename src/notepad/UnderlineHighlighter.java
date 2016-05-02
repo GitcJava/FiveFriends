@@ -2,15 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package auditorium.tsolak_harutyunyan.notepad;
+package notepad;
 
 import javax.swing.text.*;
 import java.awt.*;
 
-/**
- *
- * @author user8
- */
+
 public class UnderlineHighlighter extends DefaultHighlighter {
 
     public UnderlineHighlighter(Color c) {
