@@ -13,7 +13,7 @@ public class TowerFrame extends JFrame {
     public TowerFrame() {
         super("Hanoi Tower");
         JPanel panel = new JPanel();
-        panel.setBackground(Color.BLUE);
+        panel.setBackground(Color.pink);
         towerCanvas = new TowerCanvas();
         jTextField = new JTextField("3", 2);
         JButton addButton = new JButton("add");
@@ -69,8 +69,7 @@ public class TowerFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        TowerFrame
-                towerFrame = new TowerFrame();
+        TowerFrame towerFrame = new TowerFrame();
 
     }
 }

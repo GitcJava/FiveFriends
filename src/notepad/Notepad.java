@@ -4,10 +4,13 @@ package notepad;
 
 import util.BraceChecker;
 import util.SearchFrame;
+import util.UnderlineHighlighter;
+import util.MistakeHighlighter;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.text.Highlighter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,6 +29,11 @@ public class Notepad extends JFrame {
     private BraceChecker braceChecker;
     private File file;
     private NotepadMenuBar notepadMenu;
+   // private WordSearch wordSearch;
+    private  Highlighter.HighlightPainter painter;
+    private Highlighter highlighter;
+    private MistakeHighlighter mistakeHighlighter;
+
 
 
     public Notepad() {
@@ -38,8 +46,11 @@ public class Notepad extends JFrame {
         notepadMenu = new NotepadMenuBar();
         jFileChooser = new JFileChooser();
         textArea = new JTextArea();
+        highlighter = new UnderlineHighlighter(null);
+
+        textArea.setHighlighter(highlighter);
         resultMessageFile = new JTextField();
-        font = new Font("Font.PLAIN", Font.PLAIN, 22);
+        font = new Font("Font.PLAIN", Font.PLAIN, 15);
         braceChecker = BraceChecker.getInstance();
         textArea.setFont(font);
         JScrollPane scrollPain =new JScrollPane();
@@ -49,10 +60,11 @@ public class Notepad extends JFrame {
         jPanel.add(resultMessageFile);
         add(jPanel, BorderLayout.SOUTH);
         JToolBar toolBar = new JToolBar();
-        add(toolBar,BorderLayout.PAGE_START);
-        add(scrollPain,BorderLayout.CENTER);
+        add(toolBar, BorderLayout.PAGE_START);
+        add(scrollPain, BorderLayout.CENTER);
         toolBar.setAlignmentX(0);
         add(textArea, BorderLayout.CENTER);
+
 
 
         JButton newbutton = new JButton(createImageIcon("icons\\New.png"));
@@ -199,21 +211,22 @@ public class Notepad extends JFrame {
         setLocation(100, 100);
         setVisible(true);
         resultMessageFile.setFont(font);
+        mistakeHighlighter = new MistakeHighlighter(textArea);
         textArea.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                handleDocumentUpdate();
+                handleDocumentUpdate(e);
             }
 
             
             @Override
             public void removeUpdate(DocumentEvent e) {
-                handleDocumentUpdate();
+                handleDocumentUpdate(e);
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                handleDocumentUpdate();
+               // handleDocumentUpdate();
             }
         });
     }
@@ -225,11 +238,16 @@ public class Notepad extends JFrame {
     }
 
 
-    void handleDocumentUpdate() {
+    void handleDocumentUpdate(DocumentEvent e) {
         if (!braceChecker.parse(textArea.getText())) {
+            highlighter = MistakeHighlighter.comp.getHighlighter();
+            mistakeHighlighter.search(textArea.getText());
+
             resultMessageFile.setForeground(Color.red);
             resultMessageFile.setText(braceChecker.getMessage());
         } else {
+            highlighter.removeAllHighlights();
+
             resultMessageFile.setForeground(Color.darkGray);
             resultMessageFile.setText("No Error");
         }
@@ -363,6 +381,7 @@ public class Notepad extends JFrame {
         }
         return new String(b);
     }
+
 
     public boolean isLoadedTextChenged(File file) {
         if (file == null) {
