@@ -1,8 +1,15 @@
 package notepad;
 
 import javax.swing.*;
+import javax.swing.undo.UndoManager;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.io.InputStream;
+
 import java.util.Properties;
 
 class NotepadMenuBar extends JMenuBar {
@@ -16,6 +23,9 @@ class NotepadMenuBar extends JMenuBar {
     public JMenuItem mItemEn;
     public JMenuItem mItemAm;
     public JMenuItem mItemRu;
+    public JMenuItem undo;
+    public JMenuItem redo;
+
 
 
     public NotepadMenuBar() {
@@ -34,6 +44,8 @@ class NotepadMenuBar extends JMenuBar {
         mItemAm = new JMenuItem(LanguageType.AM.getLabel());
         mItemRu = new JMenuItem(LanguageType.RU.getLabel());
         search = new JMenuItem("Search");
+        undo = new JMenuItem("Undo");
+        redo = new JMenuItem("Redo");
         mLang.add(mItemEn);
         mLang.add(mItemAm);
         mLang.add(mItemRu);
@@ -43,12 +55,20 @@ class NotepadMenuBar extends JMenuBar {
         file.add(savaAsFile);
         file.add(exitFile);
         tools.add(search);
+        tools.add(undo);
+        tools.add(redo);
 
-
-
-
+        newFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+        openFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        saveFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
+        savaAsFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.ALT_MASK));
+        exitFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, InputEvent.ALT_MASK));
+        search.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, ActionEvent.CTRL_MASK));
+        undo.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, ActionEvent.CTRL_MASK));
+        redo.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Y, ActionEvent.CTRL_MASK));
 
     }
+
 
     public void init(Properties labelKeys) {
         newFile = new JMenuItem(labelKeys.getProperty(LabelKey.NEW.getName()));
@@ -67,6 +87,7 @@ class NotepadMenuBar extends JMenuBar {
         savaAsFile.setText(labels.getProperty(LabelKey.SAVE_AS.getName()));
         exitFile.setText(labels.getProperty(LabelKey.EXIT.getName()));
     }
+
 
     private Properties getMenuLabels(LanguageType languageType) {
         String posix = languageType == LanguageType.AM
@@ -120,6 +141,7 @@ class LanguageType {
         this.label = label;
         this.description = description;
     }
+
 
     String getLabel() {
         return label;

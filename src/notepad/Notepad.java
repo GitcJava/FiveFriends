@@ -1,7 +1,6 @@
 package notepad;
 
 
-
 import util.BraceChecker;
 import util.SearchFrame;
 import util.UnderlineHighlighter;
@@ -29,11 +28,9 @@ public class Notepad extends JFrame {
     private BraceChecker braceChecker;
     private File file;
     private NotepadMenuBar notepadMenu;
-   // private WordSearch wordSearch;
-    private  Highlighter.HighlightPainter painter;
     private Highlighter highlighter;
     private MistakeHighlighter mistakeHighlighter;
-
+    private JTextArea lines;
 
 
     public Notepad() {
@@ -53,7 +50,7 @@ public class Notepad extends JFrame {
         font = new Font("Font.PLAIN", Font.PLAIN, 15);
         braceChecker = BraceChecker.getInstance();
         textArea.setFont(font);
-        JScrollPane scrollPain =new JScrollPane();
+        JScrollPane scrollPain = new JScrollPane();
         JPanel jPanel = new JPanel();
         GridLayout layout = new GridLayout(1, 1);
         jPanel.setLayout(layout);
@@ -64,13 +61,23 @@ public class Notepad extends JFrame {
         add(scrollPain, BorderLayout.CENTER);
         toolBar.setAlignmentX(0);
         add(textArea, BorderLayout.CENTER);
-
+        lines = new JTextArea("1");
+        lines.setBackground(new Color(255, 255, 171, 255));
+        lines.setEditable(false);
+        lines.setColumns(2);
+        lines.setFont(font);
+        JScrollPane scrollPane = new JScrollPane();
+        scrollPane.getViewport().add(textArea);
+        scrollPane.setRowHeaderView(lines);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        JPanel tFPanel = new JPanel();
+        GridLayout layou = new GridLayout(1, 1);
+        add(scrollPane, BorderLayout.CENTER);
 
 
         JButton newbutton = new JButton(createImageIcon("icons\\New.png"));
         newbutton.setToolTipText("New");
         toolBar.add(newbutton);
-
 
 
         newbutton.addActionListener(new ActionListener() {
@@ -80,7 +87,7 @@ public class Notepad extends JFrame {
             }
         });
 
-        JButton savebutton =new JButton(createImageIcon("icons\\Save.png"));
+        JButton savebutton = new JButton(createImageIcon("icons\\Save.png"));
         savebutton.setToolTipText("Save");
         toolBar.add(savebutton);
 
@@ -92,7 +99,7 @@ public class Notepad extends JFrame {
         });
 
 
-        JButton openbutton =new JButton(createImageIcon("icons\\Open.png"));
+        JButton openbutton = new JButton(createImageIcon("icons\\Open.png"));
         openbutton.setToolTipText("Open");
         toolBar.add(openbutton);
 
@@ -104,7 +111,7 @@ public class Notepad extends JFrame {
             }
         });
 
-        final JButton zoomInbutton =new JButton(createImageIcon("icons\\ZoomIn.png"));
+        JButton zoomInbutton = new JButton(createImageIcon("icons\\ZoomIn.png"));
         zoomInbutton.setToolTipText("ZoomIn");
         toolBar.add(zoomInbutton);
 
@@ -117,7 +124,7 @@ public class Notepad extends JFrame {
             }
         });
 
-        JButton zoomOutbutton =new JButton(createImageIcon("icons\\ZoomOut.png"));
+        JButton zoomOutbutton = new JButton(createImageIcon("icons\\ZoomOut.png"));
         zoomOutbutton.setToolTipText("ZoomOut");
         toolBar.add(zoomOutbutton);
 
@@ -130,7 +137,6 @@ public class Notepad extends JFrame {
         });
 
 
-
         JButton exitbutton = new JButton(createImageIcon("icons\\Exit.png"));
         exitbutton.setToolTipText("Exit");
         toolBar.add(exitbutton);
@@ -141,9 +147,6 @@ public class Notepad extends JFrame {
                 handleExitAction();
             }
         });
-
-
-
 
 
         setJMenuBar(notepadMenu);
@@ -213,24 +216,35 @@ public class Notepad extends JFrame {
         resultMessageFile.setFont(font);
         mistakeHighlighter = new MistakeHighlighter(textArea);
         textArea.getDocument().addDocumentListener(new DocumentListener() {
+            public String getText() {
+                int count = 1;
+                String content = textArea.getText();
+                String text = count + System.getProperty("line.separator");
+                for (int i = 0; i < content.length(); i++) {
+                    if (content.charAt(i) == '\n') {
+                        text += (++count) + System.getProperty("line.separator");
+                    }
+                }
+                return text;
+            }
+
             @Override
             public void insertUpdate(DocumentEvent e) {
+                lines.setText(getText());
                 handleDocumentUpdate(e);
             }
 
-            
             @Override
             public void removeUpdate(DocumentEvent e) {
+                lines.setText(getText());
                 handleDocumentUpdate(e);
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-               // handleDocumentUpdate();
             }
         });
     }
-
 
 
     private void handleSearchAction(ActionEvent e) {
@@ -300,19 +314,20 @@ public class Notepad extends JFrame {
         newFile();
     }
 
-    private  void zoomInAction(ActionEvent e){
-        if(fontsize <50){
+    private void zoomInAction(ActionEvent e) {
+        if (fontsize < 50) {
             fontsize += 2;
-            font = new Font("Font.PLAIN",Font.PLAIN,fontsize);
+            font = new Font("Font.PLAIN", Font.PLAIN, fontsize);
             textArea.setFont(font);
 
         }
 
     }
-    private  void zoomOutAction(ActionEvent e){
-        if(fontsize >5){
+
+    private void zoomOutAction(ActionEvent e) {
+        if (fontsize > 5) {
             fontsize -= 2;
-            font = new Font("Font.PLAIN",Font.PLAIN,fontsize);
+            font = new Font("Font.PLAIN", Font.PLAIN, fontsize);
             textArea.setFont(font);
 
         }
@@ -412,12 +427,13 @@ public class Notepad extends JFrame {
     public static void main(String[] args) {
         Notepad n = new Notepad();
     }
-    public static ImageIcon createImageIcon (String path){
+
+    public static ImageIcon createImageIcon(String path) {
         URL imageIconURL = NotepadMenuBar.class.getResource(path);
         if (imageIconURL != null) {
-            return  new ImageIcon(imageIconURL );
+            return new ImageIcon(imageIconURL);
 
-        }else{
+        } else {
             System.err.println("Could not find  File " + path);
             return null;
         }
