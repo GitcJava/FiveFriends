@@ -56,11 +56,11 @@ public class TowerFrame extends JFrame {
     private void addAction() {
 
         try {
-            int c = Integer.parseInt(jTextField.getText());
-            if (c > 7) {
+            int number = Integer.parseInt(jTextField.getText());
+            if (number > 7) {
                 JOptionPane.showMessageDialog(null, "please write to number smoll than 7");
             } else {
-                towerCanvas.addDisc(c);
+                towerCanvas.addDisc(number);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
