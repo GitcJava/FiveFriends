@@ -3,7 +3,6 @@ package notepad;
 import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Properties;
 
 class NotepadMenuBar extends JMenuBar {
@@ -17,14 +16,6 @@ class NotepadMenuBar extends JMenuBar {
     public JMenuItem mItemEn;
     public JMenuItem mItemAm;
     public JMenuItem mItemRu;
-
-    public JButton newbutton;
-    public JButton openbutton;
-    public JButton savebutton;
-    public JButton exitbutton;
-    public JButton zoominbutton;
-    public JButton zoomoutbutton;
-
 
 
     public NotepadMenuBar() {

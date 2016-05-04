@@ -92,8 +92,8 @@ public class Notepad extends JFrame {
             }
         });
 
-        final JButton zoomInbutton =new JButton(createImageIcon("icons\\Zoom_in.jpg"));
-        zoomInbutton.setToolTipText("Zoom_in");
+        final JButton zoomInbutton =new JButton(createImageIcon("icons\\ZoomIn.png"));
+        zoomInbutton.setToolTipText("ZoomIn");
         toolBar.add(zoomInbutton);
 
 
@@ -105,8 +105,8 @@ public class Notepad extends JFrame {
             }
         });
 
-        JButton zoomOutbutton =new JButton(createImageIcon("icons\\Zoom_out.png"));
-        zoomOutbutton.setToolTipText("Zoom_out");
+        JButton zoomOutbutton =new JButton(createImageIcon("icons\\ZoomOut.png"));
+        zoomOutbutton.setToolTipText("ZoomOut");
         toolBar.add(zoomOutbutton);
 
         zoomOutbutton.addActionListener(new ActionListener() {
