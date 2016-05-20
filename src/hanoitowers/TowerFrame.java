@@ -17,15 +17,15 @@ public class TowerFrame extends JFrame {
         towerCanvas = new TowerCanvas();
         jTextField = new JTextField("3", 2);
         JButton addButton = new JButton("add");
-
         JButton resetButton = new JButton("reset");
         JButton playButton = new JButton("play");
 
+        //ADD button on panel
         panel.add(jTextField);
         panel.add(addButton);
         panel.add(resetButton);
         panel.add(playButton);
-
+        //Add button on ActionListener
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

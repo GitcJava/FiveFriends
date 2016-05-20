@@ -1,5 +1,7 @@
 package hanoitowers;
 
+import javax.swing.*;
+
 public class RunHanoiTower implements Runnable {
 
     public Peg first_peg;
@@ -25,10 +27,14 @@ public class RunHanoiTower implements Runnable {
             hanoiTower(n - 1, inter, from, to);
         }
     }
-
+    private void win(){
+        if (first_peg.discs.isEmpty() && second_peg.discs.isEmpty() && ! third_peg.discs.isEmpty()){
+            JOptionPane.showMessageDialog(null,"You Win...");
+        }
+    }
 
     @Override
     public void run() {
-
+        hanoiTower(size, first_peg, second_peg, third_peg);
     }
 }

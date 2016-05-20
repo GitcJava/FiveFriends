@@ -1,6 +1,8 @@
 package hanoitowers;
 
 
+
+
 import figure.Figure;
 
 import java.awt.*;
@@ -143,8 +145,11 @@ public class Peg extends Figure {
 
 
     @Override
-    public boolean isBelong(int i, int i1) {
-        return true;
+    public boolean isBelong(int x, int y) {
+     return (x >= getX() && x <= getX() + getWidth() && y >= getY()
+             && y <= getY() + getHeight() || (x >= getxBottom()
+             && x <= getxBottom() + getWidthBottom() && y >= getxBottom()
+             && y <= getyBottom() + getHeightBottom()));
     }
 
 

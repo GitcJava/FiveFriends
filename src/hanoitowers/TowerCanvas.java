@@ -2,9 +2,6 @@ package hanoitowers;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.Random;
 
 public class TowerCanvas extends JPanel {
 
@@ -24,7 +21,6 @@ public class TowerCanvas extends JPanel {
     private int dy = FIRST_PEG.getyBottom() - discHeigth;
 
     public TowerCanvas() {
-
     }
 
     public void addDisc(int c) {
@@ -40,8 +36,6 @@ public class TowerCanvas extends JPanel {
         repaint();
     }
 
-
-
     public void reset() {
         minWidth = 40;
         discHeigth = 30;
@@ -55,6 +49,21 @@ public class TowerCanvas extends JPanel {
     }
 
     public void play() {
+        if (!FIRST_PEG.discs.isEmpty()) {
+            new RunHanoiTower(FIRST_PEG, SECOND_PEG, THIRD_PEG,
+                    FIRST_PEG.discs.size());
+        }
+    }
+    @Override
+    public void paint(Graphics g) {
+        g.clearRect(0, 0, 900, 900);
+        FIRST_PEG.draw(g);
+        SECOND_PEG.draw(g);
+        THIRD_PEG.draw(g);
     }
 
+    @Override
+    public void update(Graphics g) {
+        paint(g);
+    }
 }
