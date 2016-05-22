@@ -17,7 +17,7 @@ public class TowerCanvas extends JPanel {
     private final Peg THIRD_PEG = new Peg(pegsArray[2][0], pegsArray[2][1], pegsArray[2][2], pegsArray[2][3], pegsArray[2][4], pegsArray[2][5], pegsArray[2][6], pegsArray[2][7], this, Color.BLACK);
     private boolean isAdded;
     private int minWidth = 40;
-    private int discHeigth = 30;
+    private int discHeigth = 20;
     private int dx = FIRST_PEG.getX();
     private int dy = FIRST_PEG.getyBottom() - discHeigth;
 
@@ -49,7 +49,7 @@ public class TowerCanvas extends JPanel {
 
     public void reset() {
         minWidth = 40;
-        discHeigth = 30;
+        discHeigth = 20;
         dy = FIRST_PEG.getyBottom() - discHeigth;
         dx = FIRST_PEG.getX();
         FIRST_PEG.discs.clear();
@@ -68,7 +68,7 @@ public class TowerCanvas extends JPanel {
 
     @Override
     public void paint(Graphics g) {
-        g.clearRect(0, 0, 900, 900);
+        g.clearRect(0, 0, 1000, 1000);
         FIRST_PEG.draw(g);
         SECOND_PEG.draw(g);
         THIRD_PEG.draw(g);

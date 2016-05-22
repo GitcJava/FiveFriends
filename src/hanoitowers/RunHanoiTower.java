@@ -28,7 +28,8 @@ public class RunHanoiTower implements Runnable {
         }
     }
     private void win(){
-        if (first_peg.discs.isEmpty() && second_peg.discs.isEmpty() && !third_peg.discs.isEmpty()){
+        if (first_peg.discs.isEmpty() && second_peg.discs.isEmpty()
+                && !third_peg.discs.isEmpty()){
             JOptionPane.showMessageDialog(null,"You Win...");
         }
     }

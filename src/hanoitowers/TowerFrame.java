@@ -54,7 +54,6 @@ public class TowerFrame extends JFrame {
     }
 
     private void addAction() {
-
         try {
             int number = Integer.parseInt(jTextField.getText());
             if (number > 7) {

@@ -35,24 +35,12 @@ public class Peg extends Figure {
         moveDown(to);
     }
 
-    private void moveUp(Peg to) {
-        while (getLast().getY() > getY() - 40) {
-            getLast().move(0, -4);
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            towerCanvas.repaint();
-        }
-        to.discs.add(discs.remove(discs.size() - 1));
-    }
 
     private void moveDown(Peg to) {
         while (isDoneDown(to)) {
             to.getLast().move(0, 4);
             try {
-                Thread.sleep(15);
+                Thread.sleep(20);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -60,7 +48,7 @@ public class Peg extends Figure {
         }
     }
 
-    private boolean isDoneDown(Peg to) {
+    public boolean isDoneDown(Peg to) {
         if (to.discs.size() < 2) {
             return to.getLast().getY() < to.getyBottom() - to.getLast().getHeight();
         } else {
@@ -72,18 +60,32 @@ public class Peg extends Figure {
         int xS;
         if (getX() > to.getX()) {
             xS = -4;
-            while (to.getLast().getX() - 4 >= (to.getX() - to.getLast().getWidth() / 2)) ;
-            to.getLast().move(xS, 0);
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (to.getLast().getX() - 4 >= (to.getX() - to.getLast().getWidth() / 2)) {
+                to.getLast().move(xS, 0);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                towerCanvas.repaint();
             }
-            towerCanvas.repaint();
         } else {
             xS = 4;
-            while (to.getLast().getX() <= (to.getX() - to.getLast().getWidth() / 2)) ;
-            to.getLast().move(xS, 0);
+            while (to.getLast().getX() <= (to.getX() - to.getLast().getWidth() / 2)) {
+                to.getLast().move(xS, 0);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                towerCanvas.repaint();
+            }
+        }
+    }
+
+    private void moveUp(Peg to) {
+        while (getLast().getY() > getY() - 40) {
+            getLast().move(0, -4);
             try {
                 Thread.sleep(20);
             } catch (InterruptedException e) {
@@ -91,6 +93,7 @@ public class Peg extends Figure {
             }
             towerCanvas.repaint();
         }
+        to.discs.add(discs.remove(discs.size() - 1));
     }
 
     private Figure getLast() {
