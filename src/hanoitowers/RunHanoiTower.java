@@ -19,7 +19,7 @@ public class RunHanoiTower implements Runnable {
     }
 
     public static void hanoiTower(int n, Peg from, Peg inter, Peg to) {
-        if (n == 2) {
+        if (n == 1) {
             from.moveTo(to);
         } else {
             hanoiTower(n - 1, from, to, inter);
@@ -28,7 +28,7 @@ public class RunHanoiTower implements Runnable {
         }
     }
     private void win(){
-        if (first_peg.discs.isEmpty() && second_peg.discs.isEmpty() && ! third_peg.discs.isEmpty()){
+        if (first_peg.discs.isEmpty() && second_peg.discs.isEmpty() && !third_peg.discs.isEmpty()){
             JOptionPane.showMessageDialog(null,"You Win...");
         }
     }
@@ -36,5 +36,6 @@ public class RunHanoiTower implements Runnable {
     @Override
     public void run() {
         hanoiTower(size, first_peg, second_peg, third_peg);
+        win();
     }
 }

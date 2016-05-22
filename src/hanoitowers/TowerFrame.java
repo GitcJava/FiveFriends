@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TowerFrame extends JFrame {
+
     static JTextField jTextField;
     TowerCanvas towerCanvas;
 
@@ -26,6 +27,7 @@ public class TowerFrame extends JFrame {
         panel.add(resetButton);
         panel.add(playButton);
         //Add button on ActionListener
+        add(towerCanvas, BorderLayout.CENTER);
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,8 +46,6 @@ public class TowerFrame extends JFrame {
                 towerCanvas.play();
             }
         });
-
-        add(towerCanvas, BorderLayout.CENTER);
         add(panel, BorderLayout.NORTH);
         setSize(1000, 1000);
         setLocation(200, 150);
@@ -58,18 +58,16 @@ public class TowerFrame extends JFrame {
         try {
             int number = Integer.parseInt(jTextField.getText());
             if (number > 7) {
-                JOptionPane.showMessageDialog(null, "please write to number smoll than 7");
+                JOptionPane.showMessageDialog(null, "Please write to number smoll than 7");
             } else {
                 towerCanvas.addDisc(number);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "please write to number");
+            JOptionPane.showMessageDialog(null, "Please write to number");
         }
     }
-
     public static void main(String[] args) {
         TowerFrame towerFrame = new TowerFrame();
-
     }
 }

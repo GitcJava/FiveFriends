@@ -1,8 +1,6 @@
 package hanoitowers;
 
 
-
-
 import figure.Figure;
 
 import java.awt.*;
@@ -30,29 +28,31 @@ public class Peg extends Figure {
         this.heightBottom = heightBottom;
         this.towerCanvas = towerCanvas;
     }
-    public void moveTo(Peg to){
+
+    public void moveTo(Peg to) {
         moveUp(to);
-        moveDown(to);
         moveLeftOrRight(to);
+        moveDown(to);
     }
 
-    private void moveUp (Peg to){
-        while (getLast().getY() > getY() - 50){
+    private void moveUp(Peg to) {
+        while (getLast().getY() > getY() - 40) {
             getLast().move(0, -4);
             try {
-                Thread.sleep(30);
-            }catch (InterruptedException e) {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             towerCanvas.repaint();
         }
         to.discs.add(discs.remove(discs.size() - 1));
     }
-    private void moveDown(Peg to){
-        while(isDoneDown(to)){
-            to.getLast().move(0,4);
-            try{
-                Thread.sleep(20);
+
+    private void moveDown(Peg to) {
+        while (isDoneDown(to)) {
+            to.getLast().move(0, 4);
+            try {
+                Thread.sleep(15);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -61,11 +61,10 @@ public class Peg extends Figure {
     }
 
     private boolean isDoneDown(Peg to) {
-        if(to.discs.size() < 2 ){
+        if (to.discs.size() < 2) {
             return to.getLast().getY() < to.getyBottom() - to.getLast().getHeight();
-        }
-        else{
-            return to.getLast().getY() < (to.discs.get(to.discs.size()-2).getY() - to.getLast().getHeight());
+        } else {
+            return to.getLast().getY() < (to.discs.get(to.discs.size() - 2).getY() - to.getLast().getHeight());
         }
     }
 
@@ -73,21 +72,19 @@ public class Peg extends Figure {
         int xS;
         if (getX() > to.getX()) {
             xS = -4;
-
-            while (to.getLast().getX() >= (to.getX() - to.getLast().getWidth()/2));
+            while (to.getLast().getX() - 4 >= (to.getX() - to.getLast().getWidth() / 2)) ;
             to.getLast().move(xS, 0);
-            try{
+            try {
                 Thread.sleep(20);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             towerCanvas.repaint();
-        }
-        else{
+        } else {
             xS = 4;
-            while (to.getLast().getX() <= (to.getX() - to.getLast().getWidth()/2));
-            to.getLast().move(xS,0);
-            try{
+            while (to.getLast().getX() <= (to.getX() - to.getLast().getWidth() / 2)) ;
+            to.getLast().move(xS, 0);
+            try {
                 Thread.sleep(20);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -96,8 +93,9 @@ public class Peg extends Figure {
         }
     }
 
-    private  Figure getLast()
-    {return discs.get(discs.size()-1);}
+    private Figure getLast() {
+        return discs.get(discs.size() - 1);
+    }
 
     public int getxBottom() {
         return xBottom;
@@ -131,13 +129,13 @@ public class Peg extends Figure {
         this.heightBottom = heightBottom;
     }
 
-    public void move(int x, int y){
-        setX(getX()+ x);
-        setY(getY()+y);
+    public void move(int x, int y) {
+        setX(getX() + x);
+        setY(getY() + y);
         setxBottom(getxBottom() + x);
         setyBottom(getyBottom() + y);
         for (Figure f : discs) {
-            f.move(x,y);
+            f.move(x, y);
         }
         towerCanvas.repaint();
 
@@ -146,18 +144,18 @@ public class Peg extends Figure {
 
     @Override
     public boolean isBelong(int x, int y) {
-     return (x >= getX() && x <= getX() + getWidth() && y >= getY()
-             && y <= getY() + getHeight() || (x >= getxBottom()
-             && x <= getxBottom() + getWidthBottom() && y >= getxBottom()
-             && y <= getyBottom() + getHeightBottom()));
+        return (x >= getX() && x <= getX() + getWidth() && y >= getY()
+                && y <= getY() + getHeight() || (x >= getxBottom()
+                && x <= getxBottom() + getWidthBottom() && y >= getyBottom()
+                && y <= getyBottom() + getHeightBottom()));
     }
 
 
     @Override
     public void draw(Graphics g) {
         g.setColor(getColor());
-        g.fillRect(getX(),getY(), getWidth(), getHeight());
-        g.fillRect(getxBottom(),getyBottom(),getWidthBottom(),getHeightBottom());
+        g.fillRect(getX(), getY(), getWidth(), getHeight());
+        g.fillRect(getxBottom(), getyBottom(), getWidthBottom(), getHeightBottom());
         for (Figure f : discs) {
             f.draw(g);
         }

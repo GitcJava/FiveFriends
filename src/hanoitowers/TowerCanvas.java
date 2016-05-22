@@ -2,6 +2,7 @@ package hanoitowers;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class TowerCanvas extends JPanel {
 
@@ -31,16 +32,26 @@ public class TowerCanvas extends JPanel {
         isAdded = true;
         for (int i = c; i > 0; i--) {
             int width = minWidth * i;
-            dx = (FIRST_PEG.getX() + 4) - (width / 2);
+            dx = (FIRST_PEG.getX() + 3) - (width / 2);
+            FIRST_PEG.discs.add(new Disc(dx, dy, width, discHeigth, randomColor()));
+            dy = dy - discHeigth;
         }
         repaint();
+    }
+
+    private Color randomColor() {
+        Random random = new Random();
+        int red = random.nextInt(256);
+        int green = random.nextInt(256);
+        int blue = random.nextInt(256);
+        return new Color(red, green, blue);
     }
 
     public void reset() {
         minWidth = 40;
         discHeigth = 30;
-        dx = FIRST_PEG.getX();
         dy = FIRST_PEG.getyBottom() - discHeigth;
+        dx = FIRST_PEG.getX();
         FIRST_PEG.discs.clear();
         SECOND_PEG.discs.clear();
         THIRD_PEG.discs.clear();
@@ -54,6 +65,7 @@ public class TowerCanvas extends JPanel {
                     FIRST_PEG.discs.size());
         }
     }
+
     @Override
     public void paint(Graphics g) {
         g.clearRect(0, 0, 900, 900);
